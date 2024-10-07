@@ -1,32 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="Cristian Eduardo Castro Vargas">
-    <meta name="description" content="Testing-API">
-    <title>Testing-API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Diario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="contenedor">
-        <h1>Hola Michael 👋 </h1>
-        <p>Esta es API del menú diario</p>
-        <p>El Link principal para acceder a ella => <a href="https://apiyummy.pythonanywhere.com/api/v1/">https://apiyummy.pythonanywhere.com/api/v1/</a></p>
-        <p>En este ejemplo solo accedo a la url de <b>entrantes</b>, pero hay 4 mas.</p>
-        <ul>
-            <li><a href="https://apiyummy.pythonanywhere.com/api/v1/entrantes/">https://apiyummy.pythonanywhere.com/api/v1/entrantes/</a></li>
-            <li><a href="https://apiyummy.pythonanywhere.com/api/v1/principales/">https://apiyummy.pythonanywhere.com/api/v1/principales/</a></li>
-            <li><a href="https://apiyummy.pythonanywhere.com/api/v1/postre/">https://apiyummy.pythonanywhere.com/api/v1/postre/</a></li>
-            <li><a href="https://apiyummy.pythonanywhere.com/api/v1/bebida/">https://apiyummy.pythonanywhere.com/api/v1/bebida/</a></li>
-            <li><a href="https://apiyummy.pythonanywhere.com/api/v1/precio/">https://apiyummy.pythonanywhere.com/api/v1/precio/</a></li>
-        </ul>
+    
+    <header class="text-center">
+        <img src="img/portada.png" class="img-fluid" alt="Menú del Día">
+    </header>
 
-        <div class="contenedor-anuncios">
-            <!-- Aquí va el contenido de la Api ;) -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-center">Entrantes</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Ensalada César</li>
+                    <li class="list-group-item">Bruschetta de Tomate</li>
+                    <li class="list-group-item">Gazpacho Andaluz</li>
+                    <li class="list-group-item">Croquetas de Jamón</li>
+                    <li class="list-group-item">Queso Manchego</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">Platos Principales</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Pasta Carbonara</li>
+                    <li class="list-group-item">Pollo al Horno</li>
+                    <li class="list-group-item">Bacalao a la Vizcaína</li>
+                    <li class="list-group-item">Risotto de Setas</li>
+                    <li class="list-group-item">Hamburguesa Gourmet</li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <script src="./js/index.js"></script>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3 class="text-center">Postres</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Tarta de Queso</li>
+                    <li class="list-group-item">Helado de Chocolate</li>
+                    <li class="list-group-item">Fruta del Tiempo</li>
+                    <li class="list-group-item">Tiramisu</li>
+                    <li class="list-group-item">Copa de Yogur</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">Bebidas</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Café</li>
+                    <li class="list-group-item">Té</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5 text-center">
+            <h2 class="display-6">Precio: 12 €</h2>
+            <p class="lead">Haz tu pedido llamando al: <strong>911-234-567</strong></p>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Restaurante Borcelle</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

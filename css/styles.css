@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    background-image: url('../img/fondo.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* La imagen cubrirá todo el body */
+    background-attachment: fixed; /* La imagen se quedará fija al hacer scroll */
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+}
+
+/* ======== Custom   =======*/
+
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para asegurarse de que el contenido no se salga del header */
+}
+
+@media (min-width:992px) {
+   header{
+    height: 35vh; /* Altura más pequeña del header */
+   }
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
