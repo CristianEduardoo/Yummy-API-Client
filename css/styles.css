@@ -2,26 +2,50 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     color: #333;
-    background-image: url('../img/fondoTest.png');
-    background-size: cover; /* La imagen cubrirá todo el body */
+    background-image: url('../img/background-body.png');
+    background-size: cover;
+    /* background-position: center; */
     background-attachment: fixed; /* La imagen se quedará fija al hacer scroll */
     overflow-x: hidden;
+    position: relative;
 }
 
 h1, h2, h3 {
     font-family: 'Georgia', serif;
 }
 
-/* ======== Custom =======*/
 
+/* ======== spinner ======== */
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/* ======== Customizations =======*/
 header{
     padding-top: 2rem;
 }
 
 @media (min-width:992px) {
     header .estrellas {
-        font-size: 3rem; /* Ajusta el tamaño según lo necesites */
-        line-height: 1.2; /* Ajusta el espaciado vertical si es necesario */
+        font-size: 3rem; /* Ajusta el tamaño */
+        line-height: 1.2; /* Ajusta el espaciado vertical */
     }
 }
 
@@ -46,13 +70,16 @@ header{
     color: #333;
 }
 
+
+/* ======== footer =======*/
 footer {
+    display: none; /* Ocultar el footer inicialmente */
     background-color: #333;
     color: #fff;
 }
 
 .containerFooter{
-    width: 90%;
+    max-width: 94%;
 }
 
 footer p {
@@ -63,7 +90,7 @@ footer a {
     color: #fff;
     text-decoration: none;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
 }   
 
 footer a:hover{
@@ -84,7 +111,3 @@ footer a:hover img {
 footer a img {
     margin-left: 0.5rem; 
 }
-
-/* footer {
-    display: none; /* Ocultar el footer inicialmente
-} */

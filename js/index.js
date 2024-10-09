@@ -7,6 +7,23 @@ document.addEventListener("DOMContentLoaded", function () {
     precio: "https://apiyummy.pythonanywhere.com/api/v1/precio/",
   };
 
+  const loadingElement = document.getElementById("loading");
+  const footer = document.querySelector("footer");
+
+  // Función para ocultar el spinner de carga
+  function hideLoadingSpinner() {
+    // Retrasa el ocultamiento del spinner (900 milisegundos)
+    setTimeout(() => {
+      loadingElement.style.display = "none";
+      footer.style.display = "block";
+      // Inicializar AOS después de que el spinner se haya ocultado
+      AOS.init({
+        duration: 1200,
+        delay: 300,
+      });
+    }, 900);
+  }
+
   // Función genérica para obtener datos de cualquier API
   function getMenuData(url, callback) {
     fetch(url)
@@ -39,35 +56,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Obtener y mostrar Entrantes
-  getMenuData(apiURLs.entrantes, (data) => {
-    createMenuList(data, ".ul-entrantes");
+  // Cargar todos los menús y ocultar el spinner una vez que todos los datos estén cargados
+  Promise.all([
+    getMenuData(apiURLs.entrantes, (data) => {
+      createMenuList(data, ".ul-entrantes");
+    }),
+    getMenuData(apiURLs.principales, (data) => {
+      createMenuList(data, ".ul-principales");
+    }),
+    getMenuData(apiURLs.postre, (data) => {
+      createMenuList(data, ".ul-postres");
+    }),
+    getMenuData(apiURLs.bebida, (data) => {
+      createMenuList(data, ".ul-bebidas");
+    }),
+    getMenuData(apiURLs.precio, (data) => {
+      const priceElement = document.querySelector(".precio-texto");
+      if (priceElement && data.length > 0) {
+        priceElement.textContent = `Precio: ${data[0].precio} €`;
+      }
+    }),
+  ]).then(() => {
+    // Una vez que todo el contenido se haya cargado, ocultar el spinner
+    hideLoadingSpinner();
   });
-
-  // Obtener y mostrar Platos Principales
-  getMenuData(apiURLs.principales, (data) => {
-    createMenuList(data, ".ul-principales");
-  });
-
-  // Obtener y mostrar Postres
-  getMenuData(apiURLs.postre, (data) => {
-    createMenuList(data, ".ul-postres");
-  });
-
-  // Obtener y mostrar Bebidas (sin descripción)
-  getMenuData(apiURLs.bebida, (data) => {
-    createMenuList(data, ".ul-bebidas");
-  });
-
-  // Obtener y mostrar el Precio
-  getMenuData(apiURLs.precio, (data) => {
-    const priceElement = document.querySelector(".precio-texto");
-    if (priceElement && data.length > 0) {
-      priceElement.textContent = `Precio: ${data[0].precio} €`;
-    }
-  });
-
-  // Después de cargar el contenido del menú:
-  // const footer = document.querySelector("footer");
-  // footer.style.display = "block";
 });

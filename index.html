@@ -13,19 +13,30 @@
     <link href="./img/icon-32x32.png" rel="icon">
     <link href="./img/icon-180x180.png" rel="apple-touch-icon">
 
+    <!-- Libraries and frameworks -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+
+    <!-- Spinner de carga -->
+    <div id="loading" class="text-center">
+        <p>Cargando...</p>
+        <div class="spinner-border text-warning" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+    </div>
 
     <header class="text-center">
         <div class="estrellas">
             ⭐️⭐️⭐️⭐️⭐️
         </div>
         <h1 class="display-1">Yummy API</h1>
-        <p class="lead">Experto en diseño de menús dinamicos</p>
+        <p class="lead">Experto en diseño de menús dinámicos</p>
     </header>
 
     <section class="container my-5">
@@ -68,22 +79,19 @@
     <footer class="py-4">
         <div class="containerFooter d-flex justify-content-between align-items-center mx-auto">
             <p class="mb-0">&copy; 2024 Yummy API 😋</p>
-            <a href="https://cristian-castro.com/" target="_blank" class="text-decoration-none">
+            <a href="https://cristian-castro.com/#contact" target="_blank">
                 Contacto
-                <img src="./img/enlace.svg" alt="Ícono de contacto" width="20" height="20">
+                <img src="./img/enlace.svg" alt="Ícono de contacto" width="16" height="16">
             </a>
         </div>
     </footer>
 
+    <!-- Main JS File -->
     <script src="./js/index.js" ></script>
+
+    <!-- Libraries and frameworks -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1200, // Duración global de 1000 ms para todas las animaciones
-            delay: 300,     // Retraso global de 200 ms para todas las animaciones
-        });
-    </script>
 </body>
 
 </html>
