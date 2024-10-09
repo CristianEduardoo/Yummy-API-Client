@@ -2,34 +2,48 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     color: #333;
-    background-image: url('../img/fondo.png'); /* Ruta de la imagen de fondo */
+    background-image: url('../img/fondoTest.png');
     background-size: cover; /* La imagen cubrirá todo el body */
     background-attachment: fixed; /* La imagen se quedará fija al hacer scroll */
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
     font-family: 'Georgia', serif;
 }
 
-/* ======== Custom   =======*/
+/* ======== Custom =======*/
 
-header {
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Para asegurarse de que el contenido no se salga del header */
+header{
+    padding-top: 2rem;
 }
 
 @media (min-width:992px) {
-   header{
-    height: 35vh; /* Altura más pequeña del header */
-   }
+    header .estrellas {
+        font-size: 3rem; /* Ajusta el tamaño según lo necesites */
+        line-height: 1.2; /* Ajusta el espaciado vertical si es necesario */
+    }
+}
+
+.container{
+    max-width: 80%;
 }
 
 .list-group-item {
     background-color: transparent;
+    color: #8a7d37;
     border: none;
     font-size: 1.1rem;
     text-align: center;
+}
+
+.description{
+    color: #333;
+    font-size: smaller;
+}
+
+.ul-bebidas li{
+    color: #333;
 }
 
 footer {
@@ -37,6 +51,40 @@ footer {
     color: #fff;
 }
 
+.containerFooter{
+    width: 90%;
+}
+
 footer p {
     margin: 0;
 }
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    /* align-items: center; */
+}   
+
+footer a:hover{
+    color: #8a7d37;
+    cursor: pointer;
+    transition: 0.3s ease; /
+}
+
+footer a img {
+    filter: invert(90%);
+}
+
+footer a:hover img {
+    filter: invert(50%);
+    transition: 0.3s ease;
+}
+
+footer a img {
+    margin-left: 0.5rem; 
+}
+
+/* footer {
+    display: none; /* Ocultar el footer inicialmente
+} */

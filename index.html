@@ -3,73 +3,87 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Diario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Yummy API</title>
+
+    <meta content="Yummy API" name="description">
+    <meta content="Cristian castro" name="author">
+
+    <!-- Favicons -->
+    <link href="./img/icon-32x32.png" rel="icon">
+    <link href="./img/icon-180x180.png" rel="apple-touch-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    
+
     <header class="text-center">
-        <img src="img/portada.png" class="img-fluid" alt="Menú del Día">
+        <div class="estrellas">
+            ⭐️⭐️⭐️⭐️⭐️
+        </div>
+        <h1 class="display-1">Yummy API</h1>
+        <p class="lead">Experto en diseño de menús dinamicos</p>
     </header>
 
     <section class="container my-5">
         <div class="row">
-            <div class="col-md-6">
-                <h3 class="text-center">Entrantes</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Ensalada César</li>
-                    <li class="list-group-item">Bruschetta de Tomate</li>
-                    <li class="list-group-item">Gazpacho Andaluz</li>
-                    <li class="list-group-item">Croquetas de Jamón</li>
-                    <li class="list-group-item">Queso Manchego</li>
+            <div class="col-md-6 mb-5" data-aos="fade-right">
+                <h2 class="text-center">Entrantes</h2>
+                <ul class="list-group list-group-flush ul-entrantes">
+                    <!-- Código insertado dinámicamente -->
                 </ul>
             </div>
-            <div class="col-md-6">
-                <h3 class="text-center">Platos Principales</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Pasta Carbonara</li>
-                    <li class="list-group-item">Pollo al Horno</li>
-                    <li class="list-group-item">Bacalao a la Vizcaína</li>
-                    <li class="list-group-item">Risotto de Setas</li>
-                    <li class="list-group-item">Hamburguesa Gourmet</li>
+            <div class="col-md-6" data-aos="fade-left">
+                <h2 class="text-center">Platos Principales</h2>
+                <ul class="list-group list-group-flush ul-principales">
+                    <!-- Código insertado dinámicamente -->
                 </ul>
             </div>
         </div>
 
         <div class="row mt-5">
-            <div class="col-md-6">
-                <h3 class="text-center">Postres</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Tarta de Queso</li>
-                    <li class="list-group-item">Helado de Chocolate</li>
-                    <li class="list-group-item">Fruta del Tiempo</li>
-                    <li class="list-group-item">Tiramisu</li>
-                    <li class="list-group-item">Copa de Yogur</li>
+            <div class="col-md-6 mb-5" data-aos="fade-right">
+                <h2 class="text-center">Postres</h2>
+                <ul class="list-group list-group-flush ul-postres">
+                    <!-- Código insertado dinámicamente -->
                 </ul>
             </div>
-            <div class="col-md-6">
-                <h3 class="text-center">Bebidas</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Café</li>
-                    <li class="list-group-item">Té</li>
+            <div class="col-md-6" data-aos="fade-left">
+                <h2 class="text-center">Bebidas</h2>
+                <ul class="list-group list-group-flush ul-bebidas">
+                    <!-- Código insertado dinámicamente -->
                 </ul>
             </div>
         </div>
 
-        <div class="row mt-5 text-center">
-            <h2 class="display-6">Precio: 12 €</h2>
+        <div class="row mt-5 text-center" data-aos="fade-up">
+            <h2 class="display-6 precio-texto"> <!-- Código insertado dinámicamente --> </h2>
             <p class="lead">Haz tu pedido llamando al: <strong>911-234-567</strong></p>
         </div>
     </section>
 
-    <footer class="text-center py-4">
-        <p>&copy; 2024 Restaurante Borcelle</p>
+    <footer class="py-4">
+        <div class="containerFooter d-flex justify-content-between align-items-center mx-auto">
+            <p class="mb-0">&copy; 2024 Yummy API 😋</p>
+            <a href="https://cristian-castro.com/" target="_blank" class="text-decoration-none">
+                Contacto
+                <img src="./img/enlace.svg" alt="Ícono de contacto" width="20" height="20">
+            </a>
+        </div>
     </footer>
 
+    <script src="./js/index.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Duración global de 1000 ms para todas las animaciones
+            delay: 300,     // Retraso global de 200 ms para todas las animaciones
+        });
+    </script>
 </body>
 
 </html>
